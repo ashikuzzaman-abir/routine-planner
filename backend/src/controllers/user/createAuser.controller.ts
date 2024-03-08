@@ -8,15 +8,17 @@ type BodyType = {
   password: string;
   isActive: boolean;
   role: string;
-  dateOfBirth: Date;
-  profileImage: string;
 };
 
 const createAUser = async (req: Request, res: Response) => {
   const { error } = validate(req.body);
   if (error) return res.status(400).send(error.details[0].message);
   // create a user
-  res.send('User created successfully');
+  try {
+  } catch (error: any) {
+    console.error(error);
+    return res.status(500).send('Something went wrong');
+  }
 };
 
 const validate = (data: BodyType): Joi.ValidationResult => {
@@ -41,10 +43,6 @@ const validate = (data: BodyType): Joi.ValidationResult => {
     role: Joi.string().required().messages({
       'any.required': 'Role is required',
     }),
-    dateOfBirth: Joi.date().messages({
-      'any.date': 'Date of Birth must be a valid date',
-    }),
-    profileImage: Joi.string().messages({}),
   });
   return schema.validate(data);
 };

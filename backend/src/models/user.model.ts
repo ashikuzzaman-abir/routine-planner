@@ -1,6 +1,5 @@
 import jwt from 'jsonwebtoken';
 import mongoose, { Document, Schema } from 'mongoose';
-import { AddressType, EmergencyContactType } from './types/index.js';
 
 export type UserType = Document & {
   name: string;
@@ -9,13 +8,6 @@ export type UserType = Document & {
   password: string;
   isActive: boolean;
   role: mongoose.Schema.Types.ObjectId;
-  nid?: string;
-  joiningDate?: Date;
-  address?: AddressType;
-  emergencyContact?: EmergencyContactType;
-  dateOfBirth?: Date;
-  profileImage?: string;
-  createdBy?: mongoose.Schema.Types.ObjectId;
   generateAuthToken: () => string;
 };
 
@@ -51,20 +43,8 @@ const schema = new Schema<UserType>(
       required: true,
     },
     role: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'Role',
-      required: true,
-    },
-    dateOfBirth: {
-      type: Date,
-    },
-    createdBy: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'User',
-    },
-    profileImage: {
       type: String,
-      trim: true,
+      required: true,
     },
   },
   {
@@ -80,7 +60,7 @@ schema.methods.generateAuthToken = function (this: UserType) {
       email: this.email,
       role: this.role,
     },
-    process.env.JWT_PRIVATE_KEY || 'fallback_key_12345_924542'
+    process.env.JWT_PRIVATE_KEY
   );
   return token;
 };
