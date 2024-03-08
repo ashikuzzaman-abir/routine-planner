@@ -7,7 +7,7 @@ export type UserType = Document & {
   phone: string;
   password: string;
   isActive: boolean;
-  role: mongoose.Schema.Types.ObjectId;
+  role: string;
   generateAuthToken: () => string;
 };
 
@@ -29,7 +29,6 @@ const schema = new Schema<UserType>(
     phone: {
       type: String,
       trim: true,
-      unique: true,
     },
     password: {
       type: String,

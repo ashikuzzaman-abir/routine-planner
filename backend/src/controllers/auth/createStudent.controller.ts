@@ -1,22 +1,27 @@
 import { NextFunction, Request, Response } from 'express';
 import Joi from 'joi';
 import User from '../../models/user.model';
-
+import bcrypt from 'bcrypt';
 type BodyType = {
   name: string;
   email: string;
   phone: string;
   password: string;
   isActive: boolean;
-  role: string;
 };
 
-const createAUser = async (req: Request, res: Response, next: NextFunction) => {
+const createStudent = async (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
   const { error } = validate(req.body);
   if (error) return res.status(400).send(error.details[0].message);
-  // create a user
   try {
-    const user = new User(req.body);
+    const { password, ...rest } = req.body;
+    const hasedPassword = await bcrypt.hash(password, 10);
+    const user = new User({ ...rest, password: hasedPassword });
+    user.role = 'student';
     const savedUser = await user.save();
     const token = savedUser.generateAuthToken();
     res.status(201).json({ token: token });
@@ -44,11 +49,8 @@ const validate = (data: BodyType): Joi.ValidationResult => {
     isActive: Joi.boolean().messages({
       'any.boolean': 'Active must be a boolean',
     }),
-    role: Joi.string().required().messages({
-      'any.required': 'Role is required',
-    }),
   });
   return schema.validate(data);
 };
 
-export default createAUser;
+export default createStudent;

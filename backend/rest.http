@@ -1,14 +1,34 @@
 GET http://localhost:5000/
 
 ###
-POST http://localhost:5000/api/users
+POST http://localhost:5000/api/auth/student/register
 Content-Type: application/json
 
 {
     "name": "John Doe",
-    "email": "john@gmail.com",
-    "password": "11223344",
-    "role": "user",
-    "dateOfBirth": "1990-01-01",
-    "profileImage": "https://www.google.com"
+    "email": "student@gmail.com",
+    "password": "11223344"
 }
+
+
+
+###
+POST http://localhost:5000/api/auth/teacher/register
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "email": "teacher@gmail.com",
+    "password": "11223344"
+}
+###login
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "email": "teacher@gmail.com",
+    "password": "11223344"
+}
+
+
+### "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWViNmQ3MGVhMzEwYTQzYzFiOGNkOTYiLCJuYW1lIjoiSm9obiBEb2UiLCJlbWFpbCI6ImpvaG5AZ21haWwuY29tIiwicm9sZSI6InN0dWRlbnQiLCJpYXQiOjE3MDk5Mjc3OTJ9.Wt0Ym_gWjdsw-CE8Kbtgl2LgIigteAOVzlDIQs7y1i8"

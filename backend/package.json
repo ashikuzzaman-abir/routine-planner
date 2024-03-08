@@ -12,6 +12,7 @@
   "author": "Ashikuzzaman Abir",
   "license": "ISC",
   "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
     "@types/express": "^4.17.21",
     "@types/joi": "^17.2.3",
     "@types/moment": "^2.13.0",
