@@ -23,8 +23,9 @@ const createStudent = async (
     const user = new User({ ...rest, password: hasedPassword });
     user.role = 'student';
     const savedUser = await user.save();
+    const { password: pass, ...userWithoutPassword } = savedUser.toObject();
     const token = savedUser.generateAuthToken();
-    res.status(201).json({ token: token });
+    res.status(201).json({ user: userWithoutPassword, token: token });
   } catch (error: any) {
     next(error);
   }

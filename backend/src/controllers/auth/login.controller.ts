@@ -24,8 +24,9 @@ const loginController = async (
     );
     if (!validPassword)
       return res.status(400).json({ message: 'Invalid email or password' });
+    const { password: pass, ...userWithoutPassword } = user.toObject();
     const token = user.generateAuthToken();
-    res.status(200).json({ token: token });
+    res.status(201).json({ user: userWithoutPassword, token: token });
   } catch (error: any) {
     next(error);
   }
