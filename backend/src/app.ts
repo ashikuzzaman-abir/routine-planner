@@ -10,7 +10,7 @@ import userRoutes from './routes/user.route';
 import errorHandler from './middlewares/errorHandler.middleware';
 
 import authRoutes from './routes/auth.route';
-
+import studentRoutes from './routes/student.route';
 const PORT = process.env.PORT || 5000;
 
 const app = express();
@@ -30,6 +30,7 @@ app.get('/', (req, res) => {
 // routes
 app.use('/api/users', userRoutes);
 app.use('/api/auth', authRoutes);
+app.use('/api/students', studentRoutes);
 
 app.use(errorHandler);
 
