@@ -10,6 +10,7 @@ export type ClassType = Document & {
   endingTime: string;
   students: Schema.Types.ObjectId[];
   teacher: Schema.Types.ObjectId;
+  attendies: Schema.Types.ObjectId[];
 };
 
 const schema = new Schema<ClassType>(
@@ -58,6 +59,13 @@ const schema = new Schema<ClassType>(
       ref: 'User',
       required: true,
     },
+    attendies: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'User',
+        default: [],
+      },
+    ],
   },
   {
     timestamps: true,

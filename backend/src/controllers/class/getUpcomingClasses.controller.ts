@@ -7,9 +7,12 @@ const getUpcomingClasses = async (
   next: NextFunction
 ) => {
   try {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const currentTime = `${new Date().getHours()}:${new Date().getMinutes()}`;
     const classes = await classModel
       .find({
-        $and: [{ date: { $gte: new Date() } }],
+        $and: [{ date: { $gte: today } }],
         isActive: true,
         students: { $in: req.user._id },
       })
@@ -19,6 +22,7 @@ const getUpcomingClasses = async (
         model: 'User',
         select: '-password',
       } as any);
+
     res.status(200).json({ doc: classes });
   } catch (error: any) {
     next(error);

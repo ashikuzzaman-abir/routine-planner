@@ -54,13 +54,13 @@ Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWViNzIyM2EyMDZjZjc2MGIwOWUzOWIiLCJuYW1lIjoiSm9obiBEb2UiLCJlbWFpbCI6InRlYWNoZXJAZ21haWwuY29tIiwicm9sZSI6InRlYWNoZXIiLCJpYXQiOjE3MDk5Mjk5MzR9.OJkwedEZl9CSGk6joDsYiDilQ0_MJYicWYsSDoHjGmc
 
 {
-    "name": "Maths",
+    "name": "Maths2",
     "teacher": "65eb7223a206cf760b09e39b",
     "students": ["65eb7221a206cf760b09e399"],
-    "date": "2024-12-12",
-    "startingTime": "12:00",
-    "endingTime": "13:00",
-    "description": "Maths class",
+    "date": "2024-03-09",
+    "startingTime": "16:43",
+    "endingTime": "17:30",
+    "description": "Maths class 2",
     "isActive": true
 }
 
@@ -72,5 +72,11 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWViNzIyM
 
 ###get upcoming Classes
 GET http://localhost:5000/api/classes/upcoming
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWViNzIyMWEyMDZjZjc2MGIwOWUzOTkiLCJuYW1lIjoiSm9obiBEb2UiLCJlbWFpbCI6InN0dWRlbnRAZ21haWwuY29tIiwicm9sZSI6InN0dWRlbnQiLCJpYXQiOjE3MDk5Nzc4OTJ9.sG4K-m907zfwXdI5Mhe2mFdBENgNFnOYmajEsTe5_d8
+
+
+###attend class
+PUT http://localhost:5000/api/classes/attend/65ec487d0ffcd29297963302
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWViNzIyMWEyMDZjZjc2MGIwOWUzOTkiLCJuYW1lIjoiSm9obiBEb2UiLCJlbWFpbCI6InN0dWRlbnRAZ21haWwuY29tIiwicm9sZSI6InN0dWRlbnQiLCJpYXQiOjE3MDk5Nzc4OTJ9.sG4K-m907zfwXdI5Mhe2mFdBENgNFnOYmajEsTe5_d8

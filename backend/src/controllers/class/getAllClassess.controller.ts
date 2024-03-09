@@ -14,6 +14,11 @@ const getAllClasses = async (req: any, res: Response, next: NextFunction) => {
         path: 'students',
         model: 'User',
         select: '-password',
+      } as any)
+      .populate({
+        path: 'attendies',
+        model: 'User',
+        select: '-password',
       } as any);
     res.status(200).json({ doc: classes });
   } catch (error: any) {
