@@ -5,8 +5,8 @@ POST http://localhost:5000/api/auth/student/register
 Content-Type: application/json
 
 {
-    "name": "John Doe",
-    "email": "student@gmail.com",
+    "name": "John Doe 2",
+    "email": "student2@gmail.com",
     "password": "11223344"
 }
 
@@ -26,7 +26,7 @@ POST http://localhost:5000/api/auth/login
 Content-Type: application/json
 
 {
-    "email": "teacher@gmail.com",
+    "email": "student@gmail.com",
     "password": "11223344"
 }
 
@@ -41,3 +41,36 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWViNzIyM
 GET http://localhost:5000/api/students/
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWViNzIyM2EyMDZjZjc2MGIwOWUzOWIiLCJuYW1lIjoiSm9obiBEb2UiLCJlbWFpbCI6InRlYWNoZXJAZ21haWwuY29tIiwicm9sZSI6InRlYWNoZXIiLCJpYXQiOjE3MDk5Mjk5MzR9.OJkwedEZl9CSGk6joDsYiDilQ0_MJYicWYsSDoHjGmc
+
+
+### Get all teachers
+GET http://localhost:5000/api/teachers/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWViNzIyM2EyMDZjZjc2MGIwOWUzOWIiLCJuYW1lIjoiSm9obiBEb2UiLCJlbWFpbCI6InRlYWNoZXJAZ21haWwuY29tIiwicm9sZSI6InRlYWNoZXIiLCJpYXQiOjE3MDk5Mjk5MzR9.OJkwedEZl9CSGk6joDsYiDilQ0_MJYicWYsSDoHjGmc
+
+###Create a class
+POST http://localhost:5000/api/classes/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWViNzIyM2EyMDZjZjc2MGIwOWUzOWIiLCJuYW1lIjoiSm9obiBEb2UiLCJlbWFpbCI6InRlYWNoZXJAZ21haWwuY29tIiwicm9sZSI6InRlYWNoZXIiLCJpYXQiOjE3MDk5Mjk5MzR9.OJkwedEZl9CSGk6joDsYiDilQ0_MJYicWYsSDoHjGmc
+
+{
+    "name": "Maths",
+    "teacher": "65eb7223a206cf760b09e39b",
+    "students": ["65eb7221a206cf760b09e399"],
+    "date": "2024-12-12",
+    "startingTime": "12:00",
+    "endingTime": "13:00",
+    "description": "Maths class",
+    "isActive": true
+}
+
+
+### GET all classes
+GET http://localhost:5000/api/classes/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWViNzIyM2EyMDZjZjc2MGIwOWUzOWIiLCJuYW1lIjoiSm9obiBEb2UiLCJlbWFpbCI6InRlYWNoZXJAZ21haWwuY29tIiwicm9sZSI6InRlYWNoZXIiLCJpYXQiOjE3MDk5Mjk5MzR9.OJkwedEZl9CSGk6joDsYiDilQ0_MJYicWYsSDoHjGmc
+
+###get upcoming Classes
+GET http://localhost:5000/api/classes/upcoming
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWViNzIyMWEyMDZjZjc2MGIwOWUzOTkiLCJuYW1lIjoiSm9obiBEb2UiLCJlbWFpbCI6InN0dWRlbnRAZ21haWwuY29tIiwicm9sZSI6InN0dWRlbnQiLCJpYXQiOjE3MDk5Nzc4OTJ9.sG4K-m907zfwXdI5Mhe2mFdBENgNFnOYmajEsTe5_d8

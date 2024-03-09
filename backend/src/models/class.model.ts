@@ -50,6 +50,7 @@ const schema = new Schema<ClassType>(
       {
         type: Schema.Types.ObjectId,
         ref: 'User',
+        required: true,
       },
     ],
     teacher: {

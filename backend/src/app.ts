@@ -6,11 +6,15 @@ import morgan from 'morgan';
 import helmet from 'helmet';
 import connectDB from './db';
 
-import userRoutes from './routes/user.route';
 import errorHandler from './middlewares/errorHandler.middleware';
 
+//routes
+import userRoutes from './routes/user.route';
 import authRoutes from './routes/auth.route';
 import studentRoutes from './routes/student.route';
+import classRoutes from './routes/class.route';
+import teacherRoutes from './routes/teacher.route';
+
 const PORT = process.env.PORT || 5000;
 
 const app = express();
@@ -31,6 +35,8 @@ app.get('/', (req, res) => {
 app.use('/api/users', userRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/students', studentRoutes);
+app.use('/api/teachers', teacherRoutes);
+app.use('/api/classes', classRoutes);
 
 app.use(errorHandler);
 
