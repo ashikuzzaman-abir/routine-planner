@@ -46,6 +46,11 @@ const schema = new Schema<RoutineType>(
     },
     tasks: [
       {
+        _id: {
+          type: mongoose.Schema.Types.ObjectId,
+          default: () => new mongoose.Types.ObjectId(),
+          required: true,
+        },
         title: {
           type: String,
           required: true,
@@ -74,6 +79,11 @@ const schema = new Schema<RoutineType>(
         },
         objectives: [
           {
+            _id: {
+              type: mongoose.Schema.Types.ObjectId,
+              default: () => new mongoose.Types.ObjectId(),
+              required: true,
+            },
             content: {
               type: String,
               required: true,
