@@ -9,7 +9,7 @@ export type UserType = Document & {
   isActive: boolean;
   role: string;
   preference: {
-    availableStudyTime: string;
+    availableStudyTime: number;
     learningObjective: string;
   };
   generateAuthToken: () => string;
@@ -51,7 +51,7 @@ const schema = new Schema<UserType>(
     },
     preference: {
       availableStudyTime: {
-        type: String,
+        type: Number,
         required: true,
       },
       learningObjective: {

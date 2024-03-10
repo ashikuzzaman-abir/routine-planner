@@ -94,3 +94,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWViNzIyM
 PUT http://localhost:5000/api/classes/attend/65ec487d0ffcd29297963302
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWViNzIyMWEyMDZjZjc2MGIwOWUzOTkiLCJuYW1lIjoiSm9obiBEb2UiLCJlbWFpbCI6InN0dWRlbnRAZ21haWwuY29tIiwicm9sZSI6InN0dWRlbnQiLCJpYXQiOjE3MDk5Nzc4OTJ9.sG4K-m907zfwXdI5Mhe2mFdBENgNFnOYmajEsTe5_d8
+
+
+###generate routines
+GET http://localhost:5000/api/routine/generate-routines

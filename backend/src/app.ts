@@ -14,6 +14,7 @@ import authRoutes from './routes/auth.route';
 import studentRoutes from './routes/student.route';
 import classRoutes from './routes/class.route';
 import teacherRoutes from './routes/teacher.route';
+import routineRoutes from './routes/routine.route';
 
 const PORT = process.env.PORT || 5000;
 
@@ -37,6 +38,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/students', studentRoutes);
 app.use('/api/teachers', teacherRoutes);
 app.use('/api/classes', classRoutes);
+app.use('/api/routine', routineRoutes);
 
 app.use(errorHandler);
 
