@@ -10,6 +10,20 @@ Content-Type: application/json
     "password": "11223344"
 }
 
+### registration
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "email": "john@gmail.com",
+    "password": "11223344",
+    "preference": {
+        "learningObjective": "MERN Stack",
+        "availableStudyTime": "2 hours"
+    }
+}
+
 
 
 ### create a teacher
