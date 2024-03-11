@@ -51,7 +51,7 @@ const validate = (data: BodyType): Joi.ValidationResult => {
       'any.boolean': 'Active must be a boolean',
     }),
     preference: Joi.object({
-      availableStudyTime: Joi.string().required().messages({
+      availableStudyTime: Joi.number().required().messages({
         'any.required': 'Available study time is required',
       }),
       learningObjective: Joi.string().required().messages({

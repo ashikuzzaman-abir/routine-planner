@@ -98,3 +98,36 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWViNzIyM
 
 ###generate routines
 GET http://localhost:5000/api/routine/generate-routines
+
+### New implementation
+###create a user
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "email": "johndoe@gmail.com",
+    "password": "11223344",
+    "preference": {
+        "learningObjective": "MERN Stack",
+        "availableStudyTime": 2
+    }
+}
+
+
+
+### Get all routines
+GET http://localhost:5000/api/routine/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWVmNDZiOWM4MmI5NDRiZDI4ZGY1ZTMiLCJuYW1lIjoiSm9obiBEb2UiLCJlbWFpbCI6ImpvaG5kb2VAZ21haWwuY29tIiwicm9sZSI6InN0dWRlbnQiLCJpYXQiOjE3MTAxODAwMjV9.goSXbgo3CZomUuLTwVVuNk1LrDN5O7L77K2pUwa3ExM
+
+
+### Create a routine
+POST http://localhost:5000/api/routine/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWVmNDZiOWM4MmI5NDRiZDI4ZGY1ZTMiLCJuYW1lIjoiSm9obiBEb2UiLCJlbWFpbCI6ImpvaG5kb2VAZ21haWwuY29tIiwicm9sZSI6InN0dWRlbnQiLCJpYXQiOjE3MTAxODAwMjV9.goSXbgo3CZomUuLTwVVuNk1LrDN5O7L77K2pUwa3ExM
+
+{
+    "name": "routine 1",
+    "description": "routine 1 description"
+}
