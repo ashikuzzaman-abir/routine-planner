@@ -2,6 +2,7 @@
 import { useAppDispatch } from '@/hooks/useAuth';
 import { useLoginMutation } from '@/store/service/main.api';
 import { login } from '@/store/slices/auth.slice';
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
 
@@ -33,7 +34,7 @@ const LoginPage = () => {
 		<div className='flex flex-col items-center justify-center h-screen'>
 			<form
 				onSubmit={handleSubmit}
-				className='bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4'
+				className='bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 w-96'
 			>
 				<div className='mb-4'>
 					<label
@@ -74,12 +75,12 @@ const LoginPage = () => {
 					>
 						Sign In
 					</button>
-					<a
+					<Link
 						className='inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800'
-						href='#'
+						href='/register'
 					>
-						Forgot Password?
-					</a>
+						Register
+					</Link>
 				</div>
 			</form>
 		</div>

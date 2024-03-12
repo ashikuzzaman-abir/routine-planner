@@ -1,10 +1,10 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
-const tags: any[] = [];
+const tags: any[] = ['routine'];
 export const mainApi = createApi({
 	reducerPath: 'mainApi',
 	baseQuery: fetchBaseQuery({
-		baseUrl: `http://localhost:5000/api/`,
+		baseUrl: process.env.NEXT_PUBLIC_BACKEND_URL,
 
 		prepareHeaders: (headers, { getState }) => {
 			const token: string = (getState() as any).auth?.token;
@@ -41,9 +41,11 @@ export const mainApi = createApi({
 				method: 'POST',
 				body,
 			}),
+			invalidatesTags: ['routine'],
 		}),
 		getAllRoutines: builder.query({
 			query: () => `/routine`,
+			providesTags: ['routine'],
 		}),
 	}),
 });
