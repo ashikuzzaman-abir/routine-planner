@@ -19,7 +19,7 @@ The Routine Planner system is designed to cater to the needs of a busy student w
 * [X]  Api integration with Redux Toolkit Query for necessary functionality
 * [X]  Write DockerFile for backend and frontend
 * [X]  Test the system thoroughly
-* [X]  Write README.md file for guidence and ellaboration
+* [X]  Write README.md file for guidence and elaboration
 
 ### **Technology Stack Used:**
 
