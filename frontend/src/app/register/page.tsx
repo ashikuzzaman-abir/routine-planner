@@ -125,7 +125,7 @@ const RegisterPage = () => {
 						type='number'
 						placeholder='Enter your available study time'
 						value={availableStudyTime}
-						onChange={(e) => setAvailableStudyTime(e.target.value)}
+						onChange={(e) => setAvailableStudyTime(Number(e.target.value))}
 						style={{ appearance: 'textfield' }}
 					/>
 				</div>

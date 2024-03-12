@@ -13,7 +13,9 @@ export default function Home() {
 
 	const { data, isLoading, isError, isSuccess } = useGetAllRoutinesQuery({});
 	if (!login) {
-		router.push('/login');
+		if (typeof window !== 'undefined') {
+			router.push('/login');
+		}
 	} else {
 		return (
 			<div className='max-w-[100vw] h-[calc(100vh-60px)] '>
