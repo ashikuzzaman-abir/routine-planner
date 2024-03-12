@@ -17,7 +17,7 @@ export function authfunction(req: IRequest, res: Response, next: NextFunction) {
       token,
       process.env.JWT_PRIVATE_KEY || 'fallback_key_12345_924542'
     );
-    const decodedUser = decoded;
+    const decodedUser: any = decoded;
     const user = User.findById(decodedUser._id).select('-password');
     if (!user) return res.status(401).send('Invalid token. User not found.');
     req.user = user;
