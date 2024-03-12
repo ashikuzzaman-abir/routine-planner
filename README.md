@@ -34,7 +34,7 @@ For Backend:
 * Jest
 * Supertest
 
-Fro Frontend:
+For Frontend:
 
 * TypeScript
 * Next.js
