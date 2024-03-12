@@ -1,4 +1,4 @@
-# Routine Tracker System
+# Routine Tracker System 🗓️
 
 The Routine Planner system is designed to cater to the needs of a busy student who is juggling academic commitments with a part-time job. The system aims to assist the student in managing their time effectively, generating personalized study plans, and prioritizing study sessions based on their availability and learning objectives.
 
