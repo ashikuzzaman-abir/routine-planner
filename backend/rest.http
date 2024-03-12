@@ -10,6 +10,20 @@ Content-Type: application/json
     "password": "11223344"
 }
 
+### registration
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "email": "john@gmail.com",
+    "password": "11223344",
+    "preference": {
+        "learningObjective": "MERN Stack",
+        "availableStudyTime": "2 hours"
+    }
+}
+
 
 
 ### create a teacher
@@ -80,3 +94,40 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWViNzIyM
 PUT http://localhost:5000/api/classes/attend/65ec487d0ffcd29297963302
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWViNzIyMWEyMDZjZjc2MGIwOWUzOTkiLCJuYW1lIjoiSm9obiBEb2UiLCJlbWFpbCI6InN0dWRlbnRAZ21haWwuY29tIiwicm9sZSI6InN0dWRlbnQiLCJpYXQiOjE3MDk5Nzc4OTJ9.sG4K-m907zfwXdI5Mhe2mFdBENgNFnOYmajEsTe5_d8
+
+
+###generate routines
+GET http://localhost:5000/api/routine/generate-routines
+
+### New implementation
+###create a user
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "email": "johndoe@gmail.com",
+    "password": "11223344",
+    "preference": {
+        "learningObjective": "MERN Stack",
+        "availableStudyTime": 2
+    }
+}
+
+
+
+### Get all routines
+GET http://localhost:5000/api/routine/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWVmNDZiOWM4MmI5NDRiZDI4ZGY1ZTMiLCJuYW1lIjoiSm9obiBEb2UiLCJlbWFpbCI6ImpvaG5kb2VAZ21haWwuY29tIiwicm9sZSI6InN0dWRlbnQiLCJpYXQiOjE3MTAxODAwMjV9.goSXbgo3CZomUuLTwVVuNk1LrDN5O7L77K2pUwa3ExM
+
+
+### Create a routine
+POST http://localhost:5000/api/routine/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWVmNDZiOWM4MmI5NDRiZDI4ZGY1ZTMiLCJuYW1lIjoiSm9obiBEb2UiLCJlbWFpbCI6ImpvaG5kb2VAZ21haWwuY29tIiwicm9sZSI6InN0dWRlbnQiLCJpYXQiOjE3MTAxODAwMjV9.goSXbgo3CZomUuLTwVVuNk1LrDN5O7L77K2pUwa3ExM
+
+{
+    "name": "routine 1",
+    "description": "routine 1 description"
+}

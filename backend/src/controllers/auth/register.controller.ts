@@ -8,14 +8,13 @@ type BodyType = {
   phone: string;
   password: string;
   isActive: boolean;
-  
+  preference: {
+    availableStudyTime: string;
+    learningObjective: string;
+  };
 };
 
-const createStudent = async (
-  req: Request,
-  res: Response,
-  next: NextFunction
-) => {
+const register = async (req: Request, res: Response, next: NextFunction) => {
   const { error } = validate(req.body);
   if (error) return res.status(400).send(error.details[0].message);
   try {
@@ -51,9 +50,16 @@ const validate = (data: BodyType): Joi.ValidationResult => {
     isActive: Joi.boolean().messages({
       'any.boolean': 'Active must be a boolean',
     }),
-    
+    preference: Joi.object({
+      availableStudyTime: Joi.number().required().messages({
+        'any.required': 'Available study time is required',
+      }),
+      learningObjective: Joi.string().required().messages({
+        'any.required': 'Learning objective is required',
+      }),
+    }),
   });
   return schema.validate(data);
 };
 
-export default createStudent;
+export default register;

@@ -1,0 +1,196 @@
+[
+  {
+    "title": "Learn MongoDB",
+    "description": "Understand the basics of MongoDB, a NoSQL database",
+    "duration": 4,
+    "priority": 1,
+    "objectives": [
+      {
+        "content": "Install MongoDB"
+      },
+      {
+        "content": "Understand MongoDB data model"
+      },
+      {
+        "content": "Perform CRUD operations"
+      },
+      {
+        "content": "Learn MongoDB Atlas"
+      }
+    ]
+  },
+  {
+    "title": "Learn Express.js",
+    "description": "Learn to build server-side applications using Express.js",
+    "duration": 3,
+    "priority": 2,
+    "objectives": [
+      {
+        "content": "Understand Express.js basics"
+      },
+      {
+        "content": "Learn routing in Express.js"
+      },
+      {
+        "content": "Learn middleware in Express.js"
+      }
+    ]
+  },
+  {
+    "title": "Learn React.js",
+    "description": "Learn to build front-end applications using React.js",
+    "duration": 4,
+    "priority": 3,
+    "objectives": [
+      {
+        "content": "Understand React.js basics"
+      },
+      {
+        "content": "Learn JSX"
+      },
+      {
+        "content": "Learn React.js state management"
+      },
+      {
+        "content": "Learn React.js Hooks"
+      }
+    ]
+  },
+  {
+    "title": "Learn Node.js",
+    "description": "Learn to build server-side applications using Node.js",
+    "duration": 3,
+    "priority": 4,
+    "objectives": [
+      {
+        "content": "Understand Node.js basics"
+      },
+      {
+        "content": "Learn Node.js modules"
+      },
+      {
+        "content": "Learn asynchronous programming in Node.js"
+      }
+    ]
+  },
+  {
+    "title": "Build a MERN Stack Application",
+    "description": "Apply all the learned skills to build a MERN Stack Application",
+    "duration": 4,
+    "priority": 5,
+    "objectives": [
+      {
+        "content": "Design the application architecture"
+      },
+      {
+        "content": "Implement the back-end"
+      },
+      {
+        "content": "Implement the front-end"
+      },
+      {
+        "content": "Deploy the application"
+      }
+    ]
+  },
+  {
+    "title": "Learn Redux",
+    "description": "Learn to manage application state using Redux",
+    "duration": 2,
+    "priority": 6,
+    "objectives": [
+      {
+        "content": "Understand Redux basics"
+      },
+      {
+        "content": "Learn Redux actions and reducers"
+      },
+      {
+        "content": "Learn Redux middleware"
+      },
+      {
+        "content": "Learn to integrate Redux with React.js"
+      }
+    ]
+  },
+  {
+    "title": "Learn Jest",
+    "description": "Learn to test JavaScript applications using Jest",
+    "duration": 2,
+    "priority": 7,
+    "objectives": [
+      {
+        "content": "Understand Jest basics"
+      },
+      {
+        "content": "Learn to write unit tests with Jest"
+      },
+      {
+        "content": "Learn to write integration tests with Jest"
+      },
+      {
+        "content": "Learn to mock functions with Jest"
+      }
+    ]
+  },
+  {
+    "title": "Learn Docker",
+    "description": "Learn to containerize applications using Docker",
+    "duration": 2,
+    "priority": 8,
+    "objectives": [
+      {
+        "content": "Understand Docker basics"
+      },
+      {
+        "content": "Learn Dockerfile"
+      },
+      {
+        "content": "Learn Docker Compose"
+      },
+      {
+        "content": "Learn to deploy Docker containers"
+      }
+    ]
+  },
+  {
+    "title": "Learn TypeScript",
+    "description": "Learn to write type-safe JavaScript using TypeScript",
+    "duration": 2,
+    "priority": 9,
+    "objectives": [
+      {
+        "content": "Understand TypeScript basics"
+      },
+      {
+        "content": "Learn TypeScript types"
+      },
+      {
+        "content": "Learn to write type-safe code"
+      },
+      {
+        "content": "Learn to integrate TypeScript with React.js"
+      }
+    ]
+  },
+  {
+    "title": "Learn GraphQL",
+    "description": "Learn to build APIs using GraphQL",
+    "duration": 2,
+    "priority": 10,
+    "objectives": [
+      {
+        "content": "Understand GraphQL basics"
+      },
+      {
+        "content": "Learn GraphQL queries and mutations"
+      },
+      {
+        "content": "Learn GraphQL schema and resolvers"
+      },
+      {
+        "content": "Learn to integrate GraphQL with Express.js"
+      }
+    ]
+  }
+]
